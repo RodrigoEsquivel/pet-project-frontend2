@@ -15,6 +15,7 @@ import { GlobalStyle } from 'styles/global-styles';
 import { HomePage } from './pages/HomePage/Loadable';
 import { LoginPage } from './pages/LoginPage/Loadable';
 import { NotFoundPage } from './components/NotFoundPage/Loadable';
+import { SignUpPage } from './pages/SignUpPage/Loadable';
 import { useTranslation } from 'react-i18next';
 
 export function App() {
@@ -33,6 +34,7 @@ export function App() {
         <Route exact path="/" component={LoginPage} />
         <Route path="/login" component={LoginPage} />
         <Route path="/HomePage" component={HomePage} />
+        <Route path="/SignUp" component={SignUpPage} />
         <Route component={NotFoundPage} />
       </Switch>
       <GlobalStyle />

@@ -21,7 +21,7 @@ import {
   StyledH3,
 } from '../../components/CommonComponents';
 import { useLoginSlice } from './slice';
-import logo from './img/logo.png';
+import logo from '../img/logo.png';
 import { selectError, selectIsLogged } from './slice/selectors';
 import { RouteComponentProps } from 'react-router';
 
@@ -30,8 +30,8 @@ interface Props extends RouteComponentProps<any> {}
 export function LoginPage(props: Props) {
   const dispatch = useDispatch();
   const { actions } = useLoginSlice();
-  const isLogged = useSelector(selectIsLogged);
-  const error = useSelector(selectError);
+  const isLogged: boolean = useSelector(selectIsLogged);
+  const error: boolean = useSelector(selectError);
   const onChangeEmail = (evt: React.ChangeEvent<HTMLInputElement>) => {
     dispatch(actions.setEmail(evt.currentTarget.value));
   };
@@ -94,7 +94,7 @@ export function LoginPage(props: Props) {
                     <Text>
                       {' '}
                       Don't have an account?{' '}
-                      <Anchor href="/sign-up" label="Sign Up" size={''} />
+                      <Anchor href="/SignUp" label="Sign Up" size={''} />
                     </Text>
 
                     <Box height={''} width={''}>

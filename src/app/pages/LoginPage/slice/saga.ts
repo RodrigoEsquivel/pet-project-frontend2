@@ -17,7 +17,6 @@ function* loginWorkerSaga() {
   try {
     const Email: string = yield select(selectEmail);
     const Password: string = yield select(selectPassword);
-    console.log(Email, Password);
     const requestHeaders = new Headers();
     requestHeaders.append('Content-Type', 'application/x-www-form-urlencoded');
 
